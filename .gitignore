@@ -2,3 +2,35 @@ tests/output/*
 !tests/output/.gitkeep
 vendor
 composer.lock
+
+### IDE generated files
+# PhpStorm
+/.idea/
+/.idea_modules/
+# NetBeans
+/nbproject/
+# Eclipse & ZendStudio
+/.buildpath
+/.cache
+/.metadata
+/.project
+/.settings
+# Others
+/atlassian*
+/sitemap
+# backup files
+~* # some temp files begins by ~
+*.bk 
+*.bak
+
+### OS generated files
+# Windows folders cache
+desktop.ini
+Desktop.ini
+Thumbs.db
+# Windows shortcuts
+*.lnk
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# MacOS
+.DS_Store
