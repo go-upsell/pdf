@@ -98,8 +98,8 @@ class Pdf extends Container
 		// Configure the container
 		parent::__construct($config);
 		
-		// Is the document a file
-		if (is_file($document))
+		// Is the document a file or a url
+		if (is_file($document) || is_int(strpos($document, 'http')))
 		{
 			// So that the save method can save the PDF in the same folder as
 			// the original source document we need a refrence to it.
@@ -121,7 +121,7 @@ class Pdf extends Container
 		}
 		
 		// Check for a HTML string
-		elseif (Str::contains($document, 'DOCTYPE'))
+		elseif (is_int(strpos($document, 'DOCTYPE')))
 		{
 			// Again lets save a temp file
 			$this->document = $this->tempFile($document, 'html');
